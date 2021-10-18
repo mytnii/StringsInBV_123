@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 int StrLength(char* str);
 void StrUpper(char* str);
@@ -55,14 +55,14 @@ void shrink(char* str)
 bool is_palindrome(char* str)
 {
     size_t n = 250;
-    char* buffer = new char[n + 1]{}; // инициализируют выделенную память значениями по умолчанию
-    //зануляет выделенную память
-    n = strlen(buffer); // возвращает длинну строки в символах
+    char* buffer = new char[n + 1]{}; // РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‚ РІС‹РґРµР»РµРЅРЅСѓСЋ РїР°РјСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏРјРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+    //Р·Р°РЅСѓР»СЏРµС‚ РІС‹РґРµР»РµРЅРЅСѓСЋ РїР°РјСЏС‚СЊ
+    n = strlen(buffer); // РІРѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅРЅСѓ СЃС‚СЂРѕРєРё РІ СЃРёРјРІРѕР»Р°С…
     StrUpper(buffer);
     shrink(buffer);
-    strcpy(buffer, str); //копирует одну строку в другую
-    // strcpy(dst, scr); // dst(destination) - строка получатель, scr(source) - строка источник
-    // strcpy(куда
+    strcpy(buffer, str); //РєРѕРїРёСЂСѓРµС‚ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ РІ РґСЂСѓРіСѓСЋ
+    // strcpy(dst, scr); // dst(destination) - СЃС‚СЂРѕРєР° РїРѕР»СѓС‡Р°С‚РµР»СЊ, scr(source) - СЃС‚СЂРѕРєР° РёСЃС‚РѕС‡РЅРёРє
+    // strcpy(РєСѓРґР°
     for (int i = 0; i < n / 2; i++)
     {
         if (str[i] != str[n - 1 - i])
@@ -104,7 +104,7 @@ bool is_in_number(char* str)
 {
     for (int i = 0; str[i]; ++i)
     {
-        if (!(str[i] >= '0' && str[i] <= '9')) // Если элемент не цифра
+        if (!(str[i] >= '0' && str[i] <= '9')) // Р•СЃР»Рё СЌР»РµРјРµРЅС‚ РЅРµ С†РёС„СЂР°
             return false;
     }
     return true;
